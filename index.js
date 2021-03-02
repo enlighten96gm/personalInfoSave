@@ -763,7 +763,7 @@
 // console.log(transform([ NaN ]))
 
 
-function transform(arr) {
+// function transform(arr) {
 //     if (!Array.isArray(arr) || arr == null) {
 //         throw new Error()
 //     } else if (arr.length === 0) {
@@ -814,35 +814,185 @@ function transform(arr) {
 //     }
 // return newArr
 
-let array = [];
-    if(Array.isArray(arr)) {
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === '--discard-next') {
-                i++
-            } else if (arr[i] === '--discard-prev') {
-                if (array.length !== 0 &&
-                      arr[i - 2] !== '--discard-next') {
-                    array.pop()
-                }
-            } else if (arr[i] === '--double-next') {
-                array.push(arr[i + 1])
-            } else if (arr[i] === '--double-prev') {
-                if (i !== 0 && 
-                arr[i - 2] !== '--discard-next') {
-                    array.push(arr[i - 1]);
-                }
-            } else {
-                array.push(arr[i])
-            }
-        } 
-    } else {
-        throw new Error('some error')
-    }
-    return array.filter(e => e !== undefined);
-};    
+// let array = [];
+//     if(Array.isArray(arr)) {
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] === '--discard-next') {
+//                 i++
+//             } else if (arr[i] === '--discard-prev') {
+//                 if (array.length !== 0 &&
+//                       arr[i - 2] !== '--discard-next') {
+//                     array.pop()
+//                 }
+//             } else if (arr[i] === '--double-next') {
+//                 array.push(arr[i + 1])
+//             } else if (arr[i] === '--double-prev') {
+//                 if (i !== 0 && 
+//                 arr[i - 2] !== '--discard-next') {
+//                     array.push(arr[i - 1]);
+//                 }
+//             } else {
+//                 array.push(arr[i])
+//             }
+//         } 
+//     } else {
+//         throw new Error('some error')
+//     }
+//     return array.filter(e => e !== undefined);
+// };    
 
-console.log(transform([1, 2, '--double-prev', 1337, '--discard-prev', 4, 5]))
+// console.log(transform([1, 2, '--double-prev', 1337, '--discard-prev', 4, 5]))
 
 
 // console.log(transform([false, '--discard-prev']))
+// const arr =  [ 'N',
+// 'o',
+// ' ',
+// 'o',
+// 'f',
+// 'f',
+// 'e',
+// 'n',
+// 's',
+// 'e',
+// ' ',
+// 'b',
+// 'u',
+// 't',
+// ',',
+// '\n',
+// 'Y',
+// 'o',
+// 'u',
+// 'r',
+// ' ',
+// 'w',
+// 'r',
+// 'i',
+// 't',
+// 'i',
+// 'n',
+// 'g',
+// ' ',
+// 'i',
+// 's',
+// ' ',
+// 'a',
+// 'm',
+// 'o',
+// 'n',
+// 'g',
+// ' ',
+// 't',
+// 'h',
+// 'e',
+// ' ',
+// 'w',
+// 'o',
+// 'r',
+// 's',
+// 't',
+// ' ',
+// 'I',
+// '\'',
+// 'v',
+// 'e',
+// ' ',
+// 'e',
+// 'v',
+// 'e',
+// 'r',
+// ' ',
+// 'r',
+// 'e',
+// 'a',
+// 'd' ]
 
+// function disemvowel(str) {
+//     let newStr = str.split('')
+//     let superduper = []
+//     console.log(newStr);
+//     for (let i = 0; i < newStr.length; i++) {
+//         if (newStr[i] == '\n' ) {
+//             superduper.push(newStr[i])
+//         }
+//         if (newStr[i] == 'a' || newStr[i] == 'e' || newStr[i] == 'i' ||
+//             newStr[i] == 'o' || newStr[i] == 'u' || newStr[i] == 'O' ||
+//             newStr[i] == 'A' || newStr[i] == 'E' || newStr[i] == 'I' ||
+//             newStr[i] == 'U') {
+//                 newStr.splice(i, 1)
+                
+//             }
+//         if (newStr[i] == 'u') {
+//             newStr.splice(i, 1)
+//         }
+//         if (newStr[i] == 'a') {
+//             newStr.splice(i, 1)
+//         }
+//     }
+
+    
+
+//     return newStr.join('')
+// }
+// console.log(disemvowel(arr.join('')));
+
+// function accum(s) {
+//     let newS = s.split('')
+//     let arr = ''
+//     for (let i = 0; i < newS.length; i++) {
+//         if (i == 0) {
+//             arr += newS[i].toUpperCase()
+//         } else if (i == 1) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 2) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 3) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 4) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 5) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 6) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 7) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 8) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 9) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         } else if (i == 10) {
+//             arr += `-${newS[i].toUpperCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}${newS[i].toLowerCase()}`
+//         }
+//     }
+//     return arr
+// }
+
+
+
+
+// console.log(accum("NyffsZeyylB"));
+
+// N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb
+
+
+// function highestAndLowest(numbers){
+//     numbers = numbers.split(" ");
+//     return Math.max.apply(null, numbers) + " " +  Math.min.apply(null, numbers)
+//   }
+// console.log(highestAndLowest("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
+
+function isIsogram(str){
+    let newStr = str.toLowerCase().split('')
+    for (let i = 0; i < newStr.length; i++) {
+        for (let j = i + 1; j < newStr.length; j++) {
+            if (newStr[i] == newStr[j]) {
+                return false
+            }
+        }
+    }
+    
+
+    return true
+}
+console.log(isIsogram("mOse"));
