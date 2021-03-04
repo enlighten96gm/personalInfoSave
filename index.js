@@ -982,17 +982,75 @@
 //   }
 // console.log(highestAndLowest("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"));
 
-function isIsogram(str){
-    let newStr = str.toLowerCase().split('')
-    for (let i = 0; i < newStr.length; i++) {
-        for (let j = i + 1; j < newStr.length; j++) {
-            if (newStr[i] == newStr[j]) {
-                return false
-            }
-        }
-    }
+// function isIsogram(str){
+//     let newStr = str.toLowerCase().split('')
+//     for (let i = 0; i < newStr.length; i++) {
+//         for (let j = i + 1; j < newStr.length; j++) {
+//             if (newStr[i] == newStr[j]) {
+//                 return false
+//             }
+//         }
+//     }
     
 
-    return true
+//     return true
+// }
+// console.log(isIsogram("mOse"));
+
+// function calc(x){
+//     let arr = ''
+//     let newArr = []
+//     let number = 0
+//     for (let i = 0; i < x.length; i++) {
+//         arr += x.charCodeAt(i)
+//     }
+//     for (let j = 0; j < arr.length; j++) {
+//         if (arr[j] !== '7') {
+//             newArr.push(arr[j])
+//         } else if (arr[j] == '7') {
+//             newArr.push('1')
+//         }
+//     }
+//     let xy = arr.split('')
+//     let newXy = []
+//     let newXz = []
+//     for (i of newArr) {
+//         newXz.push(Number(i))
+//     }
+//     for (i of xy) {
+//         newXy.push(Number(i))
+//     }
+//     let smtNew = newXz.reduce((lol, kek) => lol + kek)
+//     let smt = newXy.reduce((item, lol) => item + lol)
+//     number = smt - smtNew
+//     return number
+// }
+// console.log(calc('abcdef'));
+
+function catMouse(map,moves){
+    let arr = map.split('')
+    let state = {
+        c: false,
+        m: false,
+    }
+    let {c, m} = state
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] =  'C') {
+            c = true
+        }
+        if (c) {
+            newArr.push(arr[i])
+        }
+    }
+
+
+    return newArr  
+    
 }
-console.log(isIsogram("mOse"));
+let map = 
+`..C......
+.........
+......m..`
+
+console.log(catMouse(map,5));
