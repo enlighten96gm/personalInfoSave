@@ -1027,30 +1027,103 @@
 // }
 // console.log(calc('abcdef'));
 
-function catMouse(map,moves){
-    let arr = map.split('')
-    let state = {
-        c: false,
-        m: false,
-    }
-    let {c, m} = state
-    let newArr = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] =  'C') {
-            c = true
-        }
-        if (c) {
-            newArr.push(arr[i])
-        }
-    }
+//  _____------______-----__________------______-----__________------______-----_____
+
+// function catMouse(map,moves){
+//     let hehe = map.split('')
+//     if (!hehe.includes('C') || !hehe.includes('m')) {
+//         return "boring without two animals"
+//     }
+//     let loshara = map.split('')
+//     let losharaArr = []
+//     for (let i = 0; i < loshara.length; i++) {
+//         if (loshara[i] == 'C' || loshara[i] == 'm') {
+//             loshara.splice(loshara[i - 1], i.length)
+//             losharaArr.push(loshara)
+//         }
+//     }
 
 
-    return newArr  
+//     let arr = map.split(`\n`)
+//     let newArr = []
+//     let number = 0
+//     let flag = false
+
+//     for (let i = 0; i < arr.length; i++) {
+//         newArr.push([arr[i]])
+//     }
+//     let array = []
+//     for (let i = 0; i < newArr.length; i++) {
+//         let smt = newArr[i]
+//         array.push(smt.join().split(''))
+//     }
+//     let newArray = []
+//     for (let i = 0; i < array.length; i++) {
+
+//         if (array[i].indexOf('C') > 0 && array[i].indexOf('m') > 0 && flag == false) {
+//             newArray.push(array[i])
+//             flag = true
+//         } else {
+//             if (array[i].indexOf('C') < 0 && flag === true || array[i].indexOf('m') < 0 && flag === true) {
+//                 number += 1
+//             }
     
-}
-let map = 
-`..C......
-.........
-......m..`
+//             for (let j = 0; j < array[i].length; j++) {
+    
+//                 if (array[i][j] == 'C' && flag === false || array[i][j] == 'm' && flag === false) {
+//                     newArray.push(array[i]) 
+//                     flag = true  
+//                 } else if (array[i][j] == 'C' && flag === true || array[i][j] == 'm' && flag === true) {
+//                     newArray.push(array[i]) 
+//                     flag = false
+//                 }
+//             }
+//         }  
+//     }
+//     console.log(newArray);
+//     let firstNumber = 1
+//     let secondNumber = 1
+//     for (let i = 0; i < newArray.length; i++) {
+//         let kek = newArray[i]
+//         for (let j = 0; j < kek.length; j++) {
+//             if (kek[j] == 'C') {
+//                 firstNumber += j
+//             }
+//             if (kek[j] == 'm') {
+//                 secondNumber += j 
+//             }
+//         }
+//     }
+//     let memo = Math.abs(firstNumber - secondNumber)
+//     let exNumber = number
+    
+//     let final = exNumber + memo
 
-console.log(catMouse(map,5));
+//     if (final > moves) {
+//         return "Escaped!"
+//     } else if (final < moves) {
+//         return "Caught!"
+//     } else {
+//         return "Caught!"
+//     }
+// }
+// let map = 
+// `.............
+// .............
+// C........m...
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............
+// .............`
+
+// console.log(catMouse(map,12));
+
+//  _____------______-----__________------______-----__________------______-----_____
