@@ -66,8 +66,21 @@
 
 // console.log(FilterString("a1b2c3"));
 
-const nthFibo = n => {
-    let newN = n - 1
-    return newN <= 1 ? newN : nthFibo(newN - 1) + nthFibo(newN - 2);
+// const nthFibo = n => {
+//     let newN = n - 1
+//     return newN <= 1 ? newN : nthFibo(newN - 1) + nthFibo(newN - 2);
+// }
+// console.log(nthFibo(6));
+
+
+const set = new Set([1, 5, 10, 9, 20])
+const set2 = new Set([1, 3, 5, 10])
+
+const inersaction = new Set()
+
+for (let item of set) {
+    if (set2.has(item)) {
+        inersaction.add(item)
+    }
 }
-console.log(nthFibo(6));
+console.log(inersaction);
