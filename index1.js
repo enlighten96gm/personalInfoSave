@@ -73,14 +73,100 @@
 // console.log(nthFibo(6));
 
 
-const set = new Set([1, 5, 10, 9, 20])
-const set2 = new Set([1, 3, 5, 10])
+// const set = new Set([1, 5, 10, 9, 20])
+// const set2 = new Set([1, 3, 5, 10])
 
-const inersaction = new Set()
+// const inersaction = new Set()
 
-for (let item of set) {
-    if (set2.has(item)) {
-        inersaction.add(item)
-    }
+// for (let item of set) {
+//     if (set2.has(item)) {
+//         inersaction.add(item)
+//     }
+// }
+// console.log(inersaction);
+
+
+// function divCon(x){
+// let a = new Set()
+// let b = new Set()
+// x.forEach(element => {
+//     if ( typeof element === 'number') {
+//         a.add(Number(element))
+//     } else if ( typeof element === 'string') {
+//         b.add(element)
+//     }
+// });
+// let newNumber = 0
+//     for (let i of b) {
+//         let number = Number(i)
+//         newNumber -= number
+        
+//     }
+//     for (let i of a) {
+//         let number = Number(i)
+//         newNumber += number
+//         console.log(number)
+//     }
+//     return newNumber
+// }
+
+// function divCon(x){
+//     let number = 0
+//     let a = []
+//     let b = []
+//     x.forEach(element => {
+//         if (typeof element === 'number') {
+//             a.push(element)
+//         } else if (typeof element === 'string') {
+//             b.push(Number(element))
+//         }
+//     });
+//     for (let i of a) {
+//         number += i
+//     }
+//     for (let i of b) {
+//         number -= i
+//     }
+//     return number
+// }
+
+// console.log(divCon(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']));
+
+// function findOdd(A) {
+//     let number = 0
+//     for (let i = 0; i < A.length; i++) {
+//         for (let j = 0; j < A.length; j++) {
+//             if (A[i] === A[j]) {
+//                 number++
+//             }
+//         }
+//         if (number % 2 != 0) {
+//             return A[i]
+//         }
+//     }
+// }
+
+// console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
+
+function findOutlier(integers){
+  let a = []
+  let b = []
+  for (let i = 0; i < integers.length; i++) {
+      if (integers[i] % 2 !== 0) {
+          a.push(integers[i])
+      } else if (integers[i] % 2 === 0) {
+          b.push(integers[i])
+      }
+  }
+  if (a.length == 1) {
+      for (let i of a ) {
+          return i
+      }
+  }
+  if (b.length == 1) {
+      for (let j of b ) {
+          return j 
+      }
+  }
 }
-console.log(inersaction);
+console.log(findOutlier([0, 1, 2]))
