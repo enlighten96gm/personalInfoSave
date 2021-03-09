@@ -148,25 +148,75 @@
 
 // console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
 
-function findOutlier(integers){
-  let a = []
-  let b = []
-  for (let i = 0; i < integers.length; i++) {
-      if (integers[i] % 2 !== 0) {
-          a.push(integers[i])
-      } else if (integers[i] % 2 === 0) {
-          b.push(integers[i])
-      }
-  }
-  if (a.length == 1) {
-      for (let i of a ) {
-          return i
-      }
-  }
-  if (b.length == 1) {
-      for (let j of b ) {
-          return j 
-      }
-  }
-}
-console.log(findOutlier([0, 1, 2]))
+// function findOutlier(integers){
+//   let a = []
+//   let b = []
+//   for (let i = 0; i < integers.length; i++) {
+//       if (integers[i] % 2 !== 0) {
+//           a.push(integers[i])
+//       } else if (integers[i] % 2 === 0) {
+//           b.push(integers[i])
+//       }
+//   }
+//   if (a.length == 1) {
+//       for (let i of a ) {
+//           return i
+//       }
+//   }
+//   if (b.length == 1) {
+//       for (let j of b ) {
+//           return j 
+//       }
+//   }
+// }
+// console.log(findOutlier([0, 1, 2]))
+
+// function starSign(date) {
+//     let month = date.getMonth() + 1
+//     let dateNumber = date.getDate()
+//     if (month === 1 && dateNumber >= 21 || month === 2 && dateNumber <= 19) return 'Aquarius'
+//     if (month===2 && dateNumber >= 20 ||month===3 && dateNumber <= 20 ) return 'Pisces'
+//     if (month===3 && dateNumber >= 21 ||month===4 && dateNumber <= 20 ) return 'Aries'
+//     if (month===4 && dateNumber >= 21 ||month===5 && dateNumber <= 21 ) return 'Taurus'
+//     if (month===5 && dateNumber >= 22 ||month===6 && dateNumber <= 21 ) return 'Gemini'
+//     if (month===6 && dateNumber >= 22 ||month===7 && dateNumber <= 22 ) return 'Cancer'
+//     if (month===7 && dateNumber >= 23 ||month===8 && dateNumber <= 23 ) return 'Leo'
+//     if (month===8 && dateNumber >= 24 ||month===9 && dateNumber <= 23 ) return 'Virgo'
+//     if (month===9 && dateNumber >= 24 ||month===10 && dateNumber <= 23 ) return 'Libra'
+//     if (month===10 && dateNumber >= 24 ||month===11 && dateNumber <= 22 ) return 'Scorpio'
+//     if (month===11 && dateNumber >= 23 ||month===12 && dateNumber <= 21 ) return 'Sagittarius'
+//     if (month===12 && dateNumber >= 22 ||month===1 && dateNumber <= 20 ) return 'Capricorn'
+// }
+
+// console.log(starSign(new Date(1970, 5, 5)));
+
+
+    // let a = [1, 2, 5, 10, 8]
+    // let set = new Set(a)
+    // let set1 = new Set([3, 4, 5, 8, 1])
+
+
+    // let includes = new Set()
+
+    // for (item of set) {
+    //     if (set1.has(item)) {
+    //         includes.add(item)
+    //     }
+    // }
+    // console.log(set);
+    
+    // let a = {
+    //     x: 1,
+    //     y: 2,
+    // }
+    // let b = [...a]
+    // b.x = 3
+    // console.log(b);
+
+// function killer(suspectInfo, dead) {
+//     return /(?=.+[a-z])(?=.+\d)^[a-z\d]{3,20}$/i.test(password) ? 'VALID'
+//  : 'INVALID'}
+// console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']));
+
+// /^(?=.*\d)(?=.*[A-Z])[A-Z\d]{4,19}$/i.test(password) ? 'VALID'
+// : 'INVALID'
